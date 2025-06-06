@@ -3,8 +3,7 @@ using { cap_ext_serv as my } from '../db/schema.cds';
 @path : '/service/cap_ext_servService'
 service cap_ext_servService
 {
-    @odata.draft.enabled
-    entity ExternalProd as
+    @readonly entity ExternalProd as
         projection on my.ExternalProd;
 }
 
