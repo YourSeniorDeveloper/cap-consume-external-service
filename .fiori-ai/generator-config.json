@@ -1,0 +1,32 @@
+{
+    "version": "0.2",
+    "floorplan": "FE_LROP",
+    "project": {
+        "name": "external-prod-management-ui",
+        "targetFolder": "/home/user/projects/cap_ext_serv",
+        "title": "External Product Management",
+        "description": "Manage external products efficiently",
+        "ui5Version": "1.132.1",
+        "localUI5Version": "1.82.2",
+        "sapux": true
+    },
+    "service": {
+        "servicePath": "/service/cap_ext_servService/",
+        "capService": {
+            "projectPath": "/home/user/projects/cap_ext_serv",
+            "serviceName": "cap_ext_servService",
+            "serviceCdsPath": "srv/service.cds"
+        }
+    },
+    "entityConfig": {
+        "mainEntity": {
+            "entityName": "ExternalProd"
+        },
+        "generateLROPAnnotations": true
+    },
+    "projectType": "LIST_REPORT_OBJECT_PAGE",
+    "telemetryData": {
+        "generationSourceName": "AI Headless",
+        "generationSourceVersion": "1.17.6"
+    }
+}
