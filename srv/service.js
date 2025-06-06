@@ -4,12 +4,17 @@
  */
 const LCAPApplicationService = require('@sap/low-code-event-handler');
 const externalprod_Logic = require('./code/externalprod-logic');
+const externalorderdetails_Logic = require('./code/externalorderdetails-logic');
 
 class cap_ext_servService extends LCAPApplicationService {
     async init() {
 
         this.on('READ', 'ExternalProd', async (request, next) => {
             return externalprod_Logic(request, next);
+        });
+
+        this.on('READ', 'ExternalOrderDetails', async (request, next) => {
+            return externalorderdetails_Logic(request, next);
         });
 
         return super.init();

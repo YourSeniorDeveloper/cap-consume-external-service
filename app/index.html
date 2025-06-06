@@ -27,7 +27,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"cap_ext_servService","DetailsURL":"./service/cap_ext_servService/","Metadata":"./service/cap_ext_servService/$metadata","Entities":[{"Name":"ExternalProd","URL":"./service/cap_ext_servService/ExternalProd","FioriURL":"$fiori-preview/cap_ext_servService/ExternalProd#preview-app"}],"EntitiesCount":1}]}
+                            const data = {"Services":[{"ServiceName":"cap_ext_servService","DetailsURL":"./service/cap_ext_servService/","Metadata":"./service/cap_ext_servService/$metadata","Entities":[{"Name":"ExternalProd","URL":"./service/cap_ext_servService/ExternalProd","FioriURL":"$fiori-preview/cap_ext_servService/ExternalProd#preview-app"},{"Name":"ExternalOrderDetails","URL":"./service/cap_ext_servService/ExternalOrderDetails","FioriURL":"$fiori-preview/cap_ext_servService/ExternalOrderDetails#preview-app"}],"EntitiesCount":2}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });

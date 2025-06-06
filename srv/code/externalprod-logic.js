@@ -9,7 +9,7 @@ module.exports = async function(request, next) {
     const northwindService = await cds.connect.to('ODataWebV4.Northwind.Model');
 
     // Get the external entity identifier for Products
-    const { Products } = northwindService.entities;
+    //const { Products } = northwindService.entities;
 
     // Fetch data from the external Northwind Products entity
     //const externalProducts = await northwindService.run(SELECT.from(Products));

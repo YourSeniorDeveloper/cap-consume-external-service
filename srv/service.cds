@@ -5,6 +5,9 @@ service cap_ext_servService
 {
     @readonly entity ExternalProd as
         projection on my.ExternalProd;
+    
+    @readonly entity ExternalOrderDetails as
+        projection on my.ExternalOrderDetails;
 }
 
 annotate cap_ext_servService with @requires :
