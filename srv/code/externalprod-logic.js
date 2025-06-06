@@ -12,7 +12,8 @@ module.exports = async function(request, next) {
     const { Products } = northwindService.entities;
 
     // Fetch data from the external Northwind Products entity
-    const externalProducts = await northwindService.run(SELECT.from(Products));
+    //const externalProducts = await northwindService.run(SELECT.from(Products));
+    const externalProducts = await northwindService.run(request.query);
 
     // If externalProducts is undefined, return an empty array
     if (!externalProducts) {
