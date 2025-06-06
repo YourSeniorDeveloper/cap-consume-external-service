@@ -1,25 +1,12 @@
 # Getting Started
 
-Welcome to your new project.
+Após clonar o repositório criar os binds correspondentes no BTP através dos comandos abaixo:
 
-It contains these folders and files, following our recommended project layout:
+cf create-service xsuaa application cap_ext_serv-xsuaa
+cf create-service-key cap_ext_serv-xsuaa cap_ext_serv-xsuaa-key
+cf create-service destination lite cap_ext_serv-destination
+cf create-service-key cap_ext_serv-destination cap_ext_serv-destination-key
+cds bind -2 cap_ext_serv-xsuaa,cap_ext_serv-destination
 
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
+Ajustar o arquivo .cdsrc-private.json com os dados do destination.
 
-
-## Next Steps
-
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
-
-
-## Learn More
-
-Learn more at https://cap.cloud.sap/docs/get-started/.
