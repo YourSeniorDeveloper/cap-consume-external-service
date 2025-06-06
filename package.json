@@ -62,7 +62,15 @@
       },
       "ODataWebV4.Northwind.Model": {
         "kind": "odata",
-        "model": "srv/external/Northwind"
+        "model": "srv/external/Northwind",
+        "[production]": {
+          "credentials": {
+            "destination": "Northwind",
+            "path": "/V4/Northwind/Northwind.svc/"
+          }
+        },
+        "csrf": true,
+        "csrfInBatch": true
       }
     }
   },
